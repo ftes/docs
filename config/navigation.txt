@@ -75,6 +75,7 @@ Learn
       [/learn/more/examples/seed-projects]
       [/learn/more/examples/snippets]
     [/learn/more/resources]
+    [/learn/more/collected-data]
 
 FAQ
 
@@ -84,6 +85,7 @@ FAQ
 Reference
 
   Supported devices
+    [/reference/hardware/versioning]
     [/reference/hardware/devices]
     [/reference/hardware/wifi-dongles]
 
@@ -117,3 +119,5 @@ Reference
   SDKs
     Node.js SDK[/reference/sdk/node-sdk]
     Python SDK[/reference/sdk/python-sdk]
+
+  Device Diagnostics[/reference/diagnostics]

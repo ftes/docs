@@ -195,6 +195,12 @@ A simple tool for reading temperatures from a USB-enabled thermometer. This
 project is used as the backend to [efwe][efwe]'s awesome temperature
 visualisation at [123k.de](http://123k.de).
 
+### Uptime Robot Dashboard
+[Repository][uptime-robot-dashboard] by [secanis][secanis]
+
+A dashboard which is visualizing the [Uptime Robot API](https://uptimerobot.com/) on a Raspberry Pi, deployed via balenaCloud.
+This dashboard can be used on TVs or on monitors.
+
 <!-- ###Team Project Links -->
 
 [text2speech]:{{ $links.githubMain }}/text2speech
@@ -207,7 +213,7 @@ visualisation at [123k.de](http://123k.de).
 [firebase-dtl]:https://github.com/shaunmulligan/firebaseDTL
 [resin-cctv]:https://github.com/abresas/resin-cctv
 [salesforce-temp]:https://github.com/shaunmulligan/salesforceTemp
-[occupied]:http://www.hackster.io/craig-mulligan/occupied
+[occupied]:http://www.hackster.io/hobochild/occupied-507dc6
 [dockerHub]:https://github.com/nghiant2710/resin-DockerHubDeploymentGuide
 [resin-samba]:https://github.com/abresas/resin-samba
 [webLamp]:https://github.com/shaunmulligan/webLamp
@@ -225,12 +231,13 @@ visualisation at [123k.de](http://123k.de).
 [rpiminer]:https://github.com/csquared/resin-piminer
 [cimon]:https://bitbucket.org/efwe/cimon
 [lunch-mutn]:https://github.com/thibmaek/lunch-mutn
+[uptime-robot-dashboard]:https://github.com/secanis/uptime-robot-dashboard
 
 <!-- ###Code Snippets Links -->
 
 [py-gpio]:https://github.com/nghiant2710/resin-rpi-gpio-sample-with-python
 [picamera-node]:https://github.com/shaunmulligan/resin-rpi-nodejs-picamera
-[picamera-py]:https://github.com/shaunmulligan/resin-rpi-python-picamera
+[picamera-py]:{{ $links.githubProjects }}/balena-rpi-python-picamera
 [ADC_py]:https://github.com/shaunmulligan/resin-rpi-py-ADC
 [resin-tether]:https://github.com/petrosagg/resin-tether
 [example-pi-pins]:https://github.com/shaunmulligan/basic-gpio
@@ -238,7 +245,7 @@ visualisation at [123k.de](http://123k.de).
 <!-- ###Team Github name links-->
 
 [shaun-mulligan]:https://github.com/shaunmulligan
-[craig-mulligan]:https://github.com/craig-mulligan
+[craig-mulligan]:https://github.com/hobochild
 [aleksis]:https://github.com/abresas/
 [lifeeth]:https://bitbucket.org/lifeeth/
 [alex]:https://github.com/alexandrosm
@@ -246,6 +253,7 @@ visualisation at [123k.de](http://123k.de).
 [nghiant2710]:https://github.com/nghiant2710
 [nchronas]:https://github.com/nchronas
 [thibmaek]:https://github.com/thibmaek
+[secanis]:https://github.com/secanis
 
 <!-- ###Community Github name links -->
 

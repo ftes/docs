@@ -28,9 +28,9 @@ API keys are named tokens that do not expire and can be revoked as needed. To cr
 
 You'll see a required field for *Token name*, as well as an optional field for *Token description*:
 
-<img src="/img/common/preferences/api_key_name.png" width="60%"> 
+<img src="/img/common/preferences/api_key_name.png" width="60%">
 
-When you click *Create token*, you will see a dialog with the new API key: 
+When you click *Create token*, you will see a dialog with the new API key:
 
 <img src="/img/common/preferences/api_key_warning.png" width="60%">
 
@@ -62,7 +62,7 @@ Observers are given read-only access to the application and its devices. They ar
 
 #### Operator
 
-Operators have all the access given to observers, plus the ability to manage an application's devices. This means operators can add new devices, remove devices, perform device actions, and modify device tags, metadata, and environment variables. Operators also have full [SSH access][ssh] to the application's devices. This role can only be assigned by application owners on paid plans.
+Operators have all the access given to observers, plus the ability to manage an application's devices. This means operators can remove devices, perform device actions, and modify device tags, metadata, and environment variables. Operators also have full [SSH access][ssh] to the application's devices. This role can only be assigned by application owners on paid plans.
 
 #### Developer
 

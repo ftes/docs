@@ -25,7 +25,7 @@ Of course, the single biggest choice you have to make is whether to use off-the-
 
 ### Operating environment
 
-One of the challenges in building applications for distributed fleets is aligning your development environment with the operating environment running on your devices. You'll need a way to make sure your application and its dependencies work with your device's architecture, as well as a plan for pushing updates to your application without losing access to your devices. 
+One of the challenges in building applications for distributed fleets is aligning your development environment with the operating environment running on your devices. You'll need a way to make sure your application and its dependencies work with your device's architecture, as well as a plan for pushing updates to your application without losing access to your devices.
 
 {{ $names.company.upper }} solves for these concerns by running {{ $names.os.lower }}, a bare-bones host OS with a lightweight, Docker-compatible container engine, [{{ $names.engine.lower }}][engine-link]. With containers, you can develop your application in the way you are most comfortable, and then run that environment on your device without worrying about the underlying hardware support. Any dependencies, such as libraries and runtime environments, will already be packaged in the container.
 
@@ -42,7 +42,7 @@ During the prototyping phase, it's important to develop your application on the 
 
 You'll want to make sure you have easy access to your device, especially in the case that something goes wrong. It's best to prototype in a local lab under your control. At this stage of development, your application is incomplete and not fully tested, so you want a safe environment where you can quickly develop without risk of exposing data externally.
 
-The prototyping phase is where some of the developer-focused features of {{ $names.company.lower }} start to come into play, offering a number of ways to access the host OS and application containers running on your device: 
+The prototyping phase is where some of the developer-focused features of {{ $names.company.lower }} start to come into play, offering a number of ways to access the host OS and application containers running on your device:
 
 ### Development images
 
@@ -61,7 +61,7 @@ When developing an application, you should consider using a [development image][
 
 While prototyping, you should start thinking about how your devices will be connected when deployed in the real world.  If it's possible to have network settings preconfigured, or to have everything done by DHCP, this is easy. But most devices will need onsite configuration.
 
-{{ $names.company.upper }} provides the ability to configure networking from inside your application containers and exposes a great deal of functionality to make this easier. One example is the [{{ $names.company.short }}-wifi-connect][wifi-connect] project, which allows the device to create its own WiFi access point that users can connect with to configure proper credentials. The {{ $names.company.lower }} [supervisor API][supervisor-api] also makes it possible to configure more advanced networking parameters, including hostname and proxy configuration.
+{{ $names.company.upper }} provides the ability to configure networking from inside your application containers and exposes a great deal of functionality to make this easier. One example is the [wifi-connect][wifi-connect] project, which allows the device to create its own WiFi access point that users can connect with to configure proper credentials. The {{ $names.company.lower }} [supervisor API][supervisor-api] also makes it possible to configure more advanced networking parameters, including hostname and proxy configuration.
 
 ### Multiple developers
 

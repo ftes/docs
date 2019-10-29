@@ -4,11 +4,11 @@ excerpt: How time is synchronized and managed for {{ $names.company.lower }} dev
 ---
 # Time management
 
-{{ $names.company.upper }} devices make use of the `systemd-timesyncd` service to keep the system time synchronized. That service is running in the host OS, independent of the application containers.
+{{ $names.company.upper }} devices make use of the `systemd-timesyncd` or `chrony` service to keep the system time synchronized. That service is running in the host OS, independent of the application containers.
 
 If you want to query the current time, you can do so by using the `date` utility or the datetime related functions of the standard library of your language.
 
-{{ $names.company.upper }} devices use [UTC](https://en.wikipedia.org/wiki/Coordinated_Universal_Time) as their standard time zone. If you want to use a timezone other than UTC, you have to explicitly set the timezone using the tools available for the operating system running within your container. [resin-timezone]({{ $links.githubMain }}-playground/balena-timezone) is an example of how to do this in Debian. The {{ $names.company.lower }} dashboard shows log timestamps using the local time for the computer you are viewing it on, and you can switch it to display the timestamps in UTC by using the controls available at the log view.
+{{ $names.company.upper }} devices use [UTC](https://en.wikipedia.org/wiki/Coordinated_Universal_Time) as their standard time zone. If you want to use a timezone other than UTC, you have to explicitly set the timezone using the tools available for the operating system running within your container. [balena-timezone]({{ $links.githubPlayground }}/balena-timezone) is an example of how to do this in Debian. The {{ $names.company.lower }} dashboard shows log timestamps using the local time for the computer you are viewing it on, and you can switch it to display the timestamps in UTC by using the controls available at the log view.
 
 If you want to learn if the system has completed at least one successful NTP synchronization since boot, you can use DBUS from your container. Check the "[Checking if device time is NTP synchronized](/runtime/runtime/#checking-if-device-time-is-ntp-synchronized)" example. The `NTPSynchronized` property will tell you if you're running with a potentially stale clock or if the system is synced.
 
@@ -44,3 +44,5 @@ Starting from {{ $names.os.lower }} 2.1.0, you can configure your own NTP server
 ```
 "ntpServers": "0.resinio.pool.ntp.org 1.resinio.pool.ntp.org"
 ```
+
+Starting from {{ $names.os.lower }} 2.30.0, NTP servers can be set over DHCP.

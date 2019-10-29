@@ -14,7 +14,7 @@ Actions allow you to control the status of your applications and devices during 
 
 ### Enable Public Device URL
 
-{{ $names.company.upper }} currently exposes **port 80** for web forwarding. This setting enables web forwarding and generates a web accessible url for any applicable devices. The URLs will be of the form `<{{ $names.company.allCaps }}_DEVICE_UUID>.balena-devices.com`, where `<{{ $names.company.allCaps }}_DEVICE_UUID>` is the unique ID of the device which you can see on your dashboard.
+{{ $names.company.upper }} currently exposes **port 80** for web forwarding. This setting enables web forwarding and generates a web accessible url for any applicable devices. The URLs will be of the form `<{{ $names.company.allCaps }}_DEVICE_UUID>.balena-devices.com`, where `<{{ $names.company.allCaps }}_DEVICE_UUID>` is the unique ID of the device which you can see on your dashboard. Currently only HTTP traffic (level 7 OSI traffic) is supported via the device URLs.
 
 <img src="/img/common/enable-public-URLs.png" width="80%">
 
@@ -60,7 +60,7 @@ __Warning:__ This action is only supported on devices with an Agent version >= 1
 
 In many uses cases devices are performing sensitive or critical functionality and are not able to pause to receive an update or restart the container. For this reason we added the [update lock functionality][update-locks] in the {{ $names.company.lower }} device supervisor. This allows your application to pick and choose when and where it would like to allow updates to happen.
 
-Added to this functionality we provided a convenient button to override the lock on the device and essentially force an update. This is a precautionary measure for those times when your application crashes and hasn't released the update lock. This gives you a nice safety net to ensure you can always push new updates.  
+Added to this functionality we provided a convenient button to override the lock on the device and essentially force an update. This is a precautionary measure for those times when your application crashes and hasn't released the update lock. This gives you a nice safety net to ensure you can always push new updates.
 
 __Warning:__ This action is only supported on devices with an Agent version >= 1.1.0
 
@@ -90,9 +90,38 @@ The `Delete Device` action is an extremely dangerous action and results in disas
 
 ## Application-specific actions
 
+These actions can be found on the "Actions" menu for each application and apply to the application and all the devices in the fleet.
+
 ### Change Application Type
 
 This option allows you to convert your application to [another type][app-types], as long as the devices in the application meet the {{ $names.os.lower }} version requirements and your account has the appropriate privileges.
+
+### Rename Application
+
+This action allows you to rename your application. This action is only available for new [applications types][app-types] such as `Starter`, `Microservices` or `Essentials`. Its not currently possible to rename `Legacy` or `Classic` applications, you will first need to upgrade your app type.
+
+### Enable/Disable All Public Device URLs
+
+This action allows you to enable or disable all the device URLs for the devices in your application. Note that this will only apply to already provisioned devices in the app, any devices added after you enable this fleet wide will need to have their device URL manually enabled.
+
+### Transfer Application Ownership
+
+You can transfer application ownership between balenaCloud user accounts. In order to transfer application ownership, you will need to perform a series of steps using both the **source** account and **target** account.
+
+1. Take note of the Application name and balenaCloud username (*in the top-right drop-down*) in the **source** account
+2. In the **target** balenaCloud account, create a new balenaCloud Application using the same Application name
+3. In the **Members** of the Application you just created, add the **source** balenaCloud username as a **Developer**
+4. In the **source** balenaCloud account, select **<Application>** --> **Actions** --> **Transfer This Application**
+
+**NOTE**: If the **Transfer This Application** button is greyed out, ensure that you have created an empty Application in the **target** balenaCloud account with the same name as the source Application, and that the **source** username has been added as a **Developer** to the **target** Application.
+
+You can watch [this video](https://www.youtube.com/watch?v=nkYve7PwqmE) to learn how to transfer application ownership.
+
+### Grant Support Access to Application
+
+This action will allow you to give our balena engineering team access to the entire application fleet for a set time period.
+
+<img src="/img/common/app/support_access.png" width="80%">
 
 ### Delete Application
 
