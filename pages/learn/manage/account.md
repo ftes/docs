@@ -8,6 +8,10 @@ title: Account management
 
 {{> "general/signUp"}}
 
+## Password reset
+
+If you forget your password or if you require a password to perform specific actions, such as to disable [two-factor authentication](#enabling-two-factor-authentication), you may request a password reset. Go to the [password reset][password_reset] page and enter the email address associated with your balena account. If the email address is associated with a balena account, a password reset link will be sent to that address. Following the link, you will be able to select a new password.
+
 ## Access tokens
 
 Access tokens are used for authentication in the {{ $names.company.lower }} [API][api], [CLI][cli], and [Node.js][node-sdk] and [Python][python-sdk] SDKs. They are managed in the *Access tokens* tab of the [*Preferences*][prefs] page, which can be found via the dropdown menu in the upper-right corner of the dashboard:
@@ -154,12 +158,21 @@ Now when you log in you will be prompted for the code displayed in your authenti
 * [Authy](https://www.authy.com)
 * [1Password](https://1password.com)
 
+## Delete account
+
+If you wish to delete your balena account, go to your [_Preferences_][prefs] page, and under the _Account Details_ tab, select the _Delete Account_ button. You will need to confirm this action by entering your password. Upon confirmation, the account will be permanently deleted,  including all applications and devices.
+
+__Note__ If your account does not have a password set you can request a password using the [password reset instructions][password_reset].
+
+![Delete balena Account](/img/screenshots/delete-balena-account.png)
+
 [ssh]:/learn/manage/ssh-access
 [starter]:/learn/manage/app-types#starter
 
 [signup]:{{ $links.dashboardUrl }}/signup
 [login]:{{ $links.dashboardUrl }}/login
 [prefs]:{{ $links.dashboardUrl }}/preferences?tab=details
+[password_reset]:{{ $links.dashboardUrl }}/password-reset
 
 [api]:/reference/api/overview/
 [cli]:/reference/cli
